@@ -1,0 +1,15 @@
+package com.vishwas.lld.projects.GoogleDocs.goodCode;
+
+// Concrete implementation for image elements
+public class ImageElement implements DocumentElement{
+    private String imagePath;
+
+    public ImageElement(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    @Override
+    public String rendor() {
+        return "[Image: "+imagePath+"]\n";
+    }
+}
