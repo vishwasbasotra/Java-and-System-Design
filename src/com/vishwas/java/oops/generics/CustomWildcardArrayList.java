@@ -61,8 +61,21 @@ public class CustomWildcardArrayList<T extends Number> {
 
     static void main(String[] args) {
 
+        CustomWildcardArrayList<Integer> list1 = new CustomWildcardArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            list1.add(i);
+        }
+        System.out.println(list1);
+        for (int i = 6; i <= 11; i++) {
+            list1.add(i);
+        }
+        System.out.println(list1);
+
+        list1.set(1, 15);
+        System.out.println(list1);
+
         //Genric should be Number type only, i.e,  String is not allowed
-        //CustomWildcardArrayList<String> list1 = new CustomWildcardArrayList();
+        //CustomWildcardArrayList<String> list2 = new CustomWildcardArrayList();
 
     }
 }
