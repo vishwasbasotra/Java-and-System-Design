@@ -2,6 +2,7 @@ package com.vishwas.java.oops.generics.comparingObjects;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,6 +12,11 @@ public class Main {
         students.add(new Student(105, "Alice"));
         students.add(new Student(101, "Zayn"));
         students.add(new Student(103, "Charlie"));
+
+        // ---Using compareTo()---
+        if(students.get(0).compareTo(students.get(1)) > 0){
+            System.out.println(students.get(0).name + " has more marks");
+        }else System.out.println(students.get(1).name + " has more marks");
 
         // --- Using Comparable (Natural Order: Roll No) ---
         Collections.sort(students);
