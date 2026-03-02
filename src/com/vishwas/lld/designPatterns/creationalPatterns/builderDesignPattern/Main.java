@@ -2,7 +2,6 @@ package com.vishwas.lld.designPatterns.creationalPatterns.builderDesignPattern;
 
 public class Main {
     public static void main(String[] args) {
-        //Car.CarBuilder builder = new Car.CarBuilder();
         Car car1 = new Car.CarBuilder().setEngine("Turbo Petrol").setColor("Blue").setSunroof(true).setNavigationSystem(true).build();
         System.out.println(car1);
 
