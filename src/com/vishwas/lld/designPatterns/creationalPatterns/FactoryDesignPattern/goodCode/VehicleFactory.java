@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.factoryDesignPattern.goodCode;
+package com.vishwas.lld.designPatterns.creationalPatterns.FactoryDesignPattern.goodCode;
 
 public class VehicleFactory {
     public static Vehicle getVehicle(String vehicleType) {

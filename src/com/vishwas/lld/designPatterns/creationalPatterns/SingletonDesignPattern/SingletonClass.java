@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.singletonDesignPattern;
+package com.vishwas.lld.designPatterns.creationalPatterns.SingletonDesignPattern;
 
 import java.io.Serial;
 import java.io.Serializable;

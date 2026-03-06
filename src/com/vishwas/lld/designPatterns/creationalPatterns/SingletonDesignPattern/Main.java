@@ -1,10 +1,9 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.singletonDesignPattern;
+package com.vishwas.lld.designPatterns.creationalPatterns.SingletonDesignPattern;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Constructor;
 
 public class Main {
     public static void main(String[] args) throws Exception, CloneNotSupportedException {

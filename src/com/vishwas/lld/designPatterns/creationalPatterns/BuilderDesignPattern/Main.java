@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.builderDesignPattern;
+package com.vishwas.lld.designPatterns.creationalPatterns.BuilderDesignPattern;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.factoryDesignPattern.goodCode;
+package com.vishwas.lld.designPatterns.creationalPatterns.FactoryDesignPattern.goodCode;
 
 class Car implements Vehicle {
     @Override

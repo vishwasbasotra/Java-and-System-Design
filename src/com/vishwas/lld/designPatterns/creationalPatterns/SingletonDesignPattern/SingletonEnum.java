@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.singletonDesignPattern;
+package com.vishwas.lld.designPatterns.creationalPatterns.SingletonDesignPattern;
 
 public enum SingletonEnum {
     INSTANCE;

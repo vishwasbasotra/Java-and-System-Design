@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.factoryDesignPattern.goodCode;
+package com.vishwas.lld.designPatterns.creationalPatterns.FactoryDesignPattern.goodCode;
 
 public class Main{
     public static void main(String[] args) {

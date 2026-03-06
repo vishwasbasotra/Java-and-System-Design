@@ -1,4 +1,4 @@
-package com.vishwas.lld.designPatterns.creationalPatterns.builderDesignPattern;
+package com.vishwas.lld.designPatterns.creationalPatterns.BuilderDesignPattern;
 
 public class Car {
     private String engine;
