@@ -10,10 +10,10 @@ public class TicTacToeGame {
     private final Board board;
     private Player currentPlayer;
 
-    public TicTacToeGame(Player player1, Player player2, Board board) {
+    public TicTacToeGame(Player player1, Player player2, int size) {
         this.player1 = player1;
         this.player2 = player2;
-        this.board = board;
+        this.board = new Board(size);
         this.currentPlayer = player1;   // X usually starts
     }
 
@@ -30,7 +30,7 @@ public class TicTacToeGame {
                 // 1. Check for Win
                 if(checkWin(currentPlayer.getSymbol())){
                     board.print();
-                    System.out.println("Player "+ currentPlayer.getSymbol()+"Won!!!");
+                    System.out.println("Player "+ currentPlayer.getSymbol()+" Won!!!");
                     break;
                 }
 

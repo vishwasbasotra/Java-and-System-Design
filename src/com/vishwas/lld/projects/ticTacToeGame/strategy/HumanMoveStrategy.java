@@ -10,8 +10,10 @@ public class HumanMoveStrategy implements MoveStrategy{
 
     @Override
     public int[] determineMove(Board board, Symbol symbol) {
-        System.out.print("Player "+ symbol+" enter row and col (0 0 to 2 2: ");
+        System.out.println("Player "+ symbol);
+        System.out.print("Enter row value from (0 0 to 2 2): ");
         int r = sc.nextInt();
+        System.out.print("Enter col value from (0 0 to 2 2): ");
         int c = sc.nextInt();
         return new int[]{r, c};
     }
