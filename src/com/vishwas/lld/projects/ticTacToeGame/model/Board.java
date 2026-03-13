@@ -7,6 +7,7 @@ public class Board {
     public Board(int size, Symbol[][] grid) {
         this.size = size;
         this.grid = new Symbol[size][size];
+        // Initialize the board with EMPTY symbols
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 this.grid[i][j] = Symbol.EMPTY;
@@ -14,6 +15,9 @@ public class Board {
         }
     }
 
+    /**
+     * Checks if a move is within bounds and the cell is not already taken.
+     */
     public boolean isValidMove(int r, int c){
         return (r > 0 && r < this.size && c > 0 && c < this.size && this.grid[r][c] == Symbol.EMPTY);
     }
