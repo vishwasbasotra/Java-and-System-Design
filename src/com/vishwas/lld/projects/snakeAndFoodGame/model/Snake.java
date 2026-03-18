@@ -1,19 +1,43 @@
 package com.vishwas.lld.projects.snakeAndFoodGame.model;
 
+import com.vishwas.lld.projects.snakeAndFoodGame.enums.CellType;
 import com.vishwas.lld.projects.snakeAndFoodGame.service.Board;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class Snake {
-    private Board board;
-    private Deque<int[]> snakeBody;
-    private List<int[]> bodyPosition;
+    // LinkedList implements Deque - perfect for adding/removing from both ends
+    private LinkedList<Cell> snakeBody;
+    private Cell head;
 
-    public Snake(Board board, Deque<Integer> snakeBody, List<int[]> bodyPosition) {
-        this.board = board;
-        this.bodyPosition = new ArrayList<>(Arrays.asList(new int[]{2, 3}, new int[]{2, 4}, new int[]{2, 5}));
-        for(int[] pos: bodyPosition){
-            this.snakeBody.add(pos);
-        }
+    public Snake(Cell initPos) {
+        this.head = initPos;
+        this.snakeBody.add(head);
+        this.head.setType(CellType.SNAKE_NODE);
+    }
+
+    public void grow(Cell nextCell){
+        this.head = nextCell;
+        this.snakeBody.addFirst(head);
+        this.head.setType(CellType.SNAKE_NODE);
+    }
+
+    public void move(Cell nextCell){
+        // To move, we add a new head...
+        this.head = nextCell;
+        snakeBody.addFirst(head);
+        head.setType(CellType.SNAKE_NODE);
+
+        // ...and remove the tail (the last piece)
+        Cell tail = snakeBody.removeLast();
+        tail.setType(CellType.EMPTY);
+    }
+
+    public LinkedList<Cell> getSnakeBody() {
+        return snakeBody;
+    }
+
+    public Cell getHead() {
+        return head;
     }
 }
