@@ -1,5 +1,7 @@
 package com.vishwas.lld.projects.snakeAndFoodGame.model;
 
+import com.vishwas.lld.projects.snakeAndFoodGame.service.Board;
+
 import java.util.*;
 
 public class Snake {

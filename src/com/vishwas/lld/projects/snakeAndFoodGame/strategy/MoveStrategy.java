@@ -1,7 +1,7 @@
 package com.vishwas.lld.projects.snakeAndFoodGame.strategy;
 
-import com.vishwas.lld.projects.snakeAndFoodGame.model.Board;
+import com.vishwas.lld.projects.snakeAndFoodGame.service.Board;
 
 public interface MoveStrategy {
-    char determineMove(Board board);
+    char getNextDirection(Board board);
 }

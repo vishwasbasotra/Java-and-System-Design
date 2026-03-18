@@ -1,6 +1,5 @@
-package com.vishwas.lld.projects.snakeAndFoodGame.engine;
+package com.vishwas.lld.projects.snakeAndFoodGame.service;
 
-import com.vishwas.lld.projects.snakeAndFoodGame.model.Board;
 import com.vishwas.lld.projects.snakeAndFoodGame.model.Snake;
 import com.vishwas.lld.projects.snakeAndFoodGame.strategy.MoveStrategy;
 
@@ -18,7 +17,7 @@ public class SnakeFoodGame {
     public void play(){
         System.out.println("Let's start the game");
         while(true){
-            char move = strategy.determineMove(board);
+            char move = strategy.getNextDirection(board);
             if(board.isValidMove(move)){
 
             }

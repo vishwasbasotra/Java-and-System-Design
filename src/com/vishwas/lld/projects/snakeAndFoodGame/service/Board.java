@@ -1,4 +1,4 @@
-package com.vishwas.lld.projects.snakeAndFoodGame.model;
+package com.vishwas.lld.projects.snakeAndFoodGame.service;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class Board implements Serializable, Cloneable {
     private static Board board = null;
     private static int[][] size;
-    private int score = 0;
+    private static int score = 0;
 
     public Board(int n) {
         if(board != null){
