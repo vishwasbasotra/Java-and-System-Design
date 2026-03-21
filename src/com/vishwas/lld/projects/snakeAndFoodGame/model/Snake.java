@@ -11,6 +11,7 @@ public class Snake {
     private Cell head;
 
     public Snake(Cell initPos) {
+        this.snakeBody = new LinkedList<>();
         this.head = initPos;
         this.snakeBody.add(head);
         this.head.setType(CellType.SNAKE_NODE);

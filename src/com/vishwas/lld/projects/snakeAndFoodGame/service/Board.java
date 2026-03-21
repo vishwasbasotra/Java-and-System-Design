@@ -31,10 +31,10 @@ public class Board implements Serializable, Cloneable {
         }
     }
 
-    public static Board setSize() {
+    public static Board getInstance(int row, int col) {
         if(board == null){
             synchronized (Board.class){
-                board = new Board(10);
+                board = new Board(row, col);
             }
         }
         return board;
@@ -54,14 +54,23 @@ public class Board implements Serializable, Cloneable {
         return board;
     }
 
-    public void generateFood(int r, int c) {
+    public int getROW_COUNT() {
+        return ROW_COUNT;
+    }
+
+    public int getCOL_COUNT() {
+        return COL_COUNT;
+    }
+
+    public void generateFood() {
         // Logic to pick a random Cell and set its type to CellType.FOOD
         // Hint: Use a while loop to ensure you don't place food ON the snake
         int row, col;
         do {
             row = (int)(Math.random() * ROW_COUNT);
             col = (int)(Math.random() * COL_COUNT);
-        } while ( !cells[row][col].getType().equals(CellType.SNAKE_NODE));
+        } while (cells[row][col].getType() == CellType.SNAKE_NODE);
+
         cells[row][col].setType(CellType.FOOD);
     }
 
