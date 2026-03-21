@@ -4,7 +4,11 @@ import com.vishwas.lld.projects.snakeAndFoodGame.enums.CellType;
 import com.vishwas.lld.projects.snakeAndFoodGame.enums.Direction;
 import com.vishwas.lld.projects.snakeAndFoodGame.model.Cell;
 import com.vishwas.lld.projects.snakeAndFoodGame.model.Snake;
+import com.vishwas.lld.projects.snakeAndFoodGame.strategy.GameObserver;
 import com.vishwas.lld.projects.snakeAndFoodGame.strategy.MoveStrategy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SnakeFoodGame {
     private Board board;
@@ -12,6 +16,8 @@ public class SnakeFoodGame {
     private  MoveStrategy strategy;
     private Direction currentDirection;
     private boolean gameOver;
+    private List<GameObserver> observerList = new ArrayList<>();
+    private int score = 0;
 
     public SnakeFoodGame(Board board, Snake snake, MoveStrategy strategy) {
         this.board = board;
@@ -19,6 +25,23 @@ public class SnakeFoodGame {
         this.strategy = strategy;
         this.currentDirection = Direction.RIGHT;    // Starting direction
         this.gameOver = false;
+    }
+
+    public void addObserver(GameObserver observer){
+        observerList.add(observer);
+    }
+
+    public void notifyFoodEaten(){
+        for(GameObserver observer: observerList){
+            this.score += 10;
+            observer.onFoodEaten(this.score);
+        }
+    }
+
+    public void notifyGameOver(){
+        for(GameObserver observer: observerList){
+            observer.onGameOver(this.score);
+        }
     }
 
     // This is the heartbeat of your game
@@ -30,9 +53,11 @@ public class SnakeFoodGame {
         // Collision Check
         if(isCollision(nextCell)){
             gameOver = true;
+            notifyGameOver();   // Notification 1
         } else if (nextCell.getType() == CellType.FOOD) {
             snake.grow(nextCell);
             board.generateFood();
+            notifyFoodEaten();  // Notification 2
         }else {
             snake.move(nextCell);
         }

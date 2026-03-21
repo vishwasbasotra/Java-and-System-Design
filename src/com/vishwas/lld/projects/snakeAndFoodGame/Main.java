@@ -18,6 +18,8 @@ public class Main {
         // 3. Initialize the Game Engine
         MoveStrategy strategy = new ManualControlStrategy();
         SnakeFoodGame game = new SnakeFoodGame(board, snake, strategy);
+        // Now, every time update() finds food, the ScoreManager will automatically print!
+        game.addObserver(new ScoreManager());   // Register the observer
 
         // 4. Spawn the first food
         board.generateFood();
@@ -46,7 +48,6 @@ public class Main {
             game.update();  //Move the snake;
             System.out.println("\n----------------------------\n");
         }
-        System.out.println("Final Score: "+(snake.getSnakeBody().size()-1));
         System.out.println("Thanks for playing!");
     }
     /**
