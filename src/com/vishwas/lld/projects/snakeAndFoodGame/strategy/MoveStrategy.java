@@ -4,5 +4,5 @@ import com.vishwas.lld.projects.snakeAndFoodGame.enums.Direction;
 import com.vishwas.lld.projects.snakeAndFoodGame.service.Board;
 
 public interface MoveStrategy {
-    Direction determineDirection(Direction currentDirection);
+    Direction determineDirection(Direction currentDirection, Direction requestedDirection);
 }

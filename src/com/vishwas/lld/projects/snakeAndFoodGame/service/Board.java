@@ -31,6 +31,7 @@ public class Board implements Serializable, Cloneable {
         }
     }
 
+    // Thread-safe Singleton with Double-Checked Locking
     public static Board getInstance(int row, int col) {
         if(board == null){
             synchronized (Board.class){

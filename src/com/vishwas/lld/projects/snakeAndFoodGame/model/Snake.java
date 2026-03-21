@@ -17,6 +17,7 @@ public class Snake {
         this.head.setType(CellType.SNAKE_NODE);
     }
 
+    // Growing: Add new head, keep the tail
     public void grow(Cell nextCell){
         this.head = nextCell;
         this.snakeBody.addFirst(head);
