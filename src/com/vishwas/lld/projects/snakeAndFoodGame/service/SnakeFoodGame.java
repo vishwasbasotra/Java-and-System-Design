@@ -1,11 +1,8 @@
 package com.vishwas.lld.projects.snakeAndFoodGame.service;
 
-import com.vishwas.lld.projects.snakeAndFoodGame.enums.CellType;
-import com.vishwas.lld.projects.snakeAndFoodGame.enums.Direction;
-import com.vishwas.lld.projects.snakeAndFoodGame.model.Cell;
-import com.vishwas.lld.projects.snakeAndFoodGame.model.Snake;
-import com.vishwas.lld.projects.snakeAndFoodGame.strategy.GameObserver;
-import com.vishwas.lld.projects.snakeAndFoodGame.strategy.MoveStrategy;
+import com.vishwas.lld.projects.snakeAndFoodGame.enums.*;
+import com.vishwas.lld.projects.snakeAndFoodGame.model.*;
+import com.vishwas.lld.projects.snakeAndFoodGame.strategy.*;
 
 import java.util.ArrayList;
 import java.util.List;
