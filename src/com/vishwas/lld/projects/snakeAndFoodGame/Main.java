@@ -13,7 +13,7 @@ public class Main {
         Board board = Board.getInstance(14,12);
 
         // 2. Initialize Snake at a starting position
-        Snake snake = new Snake(board.getCell(5,4));
+        Snake snake = new Snake(board);
 
         // 3. Initialize the Game Engine
         MoveStrategy strategy = new ManualControlStrategy();

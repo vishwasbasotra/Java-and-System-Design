@@ -4,17 +4,26 @@ import com.vishwas.lld.projects.snakeAndFoodGame.enums.CellType;
 import com.vishwas.lld.projects.snakeAndFoodGame.service.Board;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 public class Snake {
     // LinkedList implements Deque - perfect for adding/removing from both ends
     private LinkedList<Cell> snakeBody;
     private Cell head;
+    private Board board;
 
-    public Snake(Cell initPos) {
+    public Snake(Board board) {
+        this.board = board;
         this.snakeBody = new LinkedList<>();
-        this.head = initPos;
+        this.head = initPos();
         this.snakeBody.add(head);
         this.head.setType(CellType.SNAKE_NODE);
+    }
+
+    private Cell initPos() {
+        int r = (int) (Math.random() * board.getROW_COUNT());
+        int c = (int) (Math.random() * board.getCOL_COUNT());
+        return board.getCell(r, c);
     }
 
     // Growing: Add new head, keep the tail
