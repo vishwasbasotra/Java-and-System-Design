@@ -51,7 +51,7 @@ public class ParkingFloor {
     /**
      * Thread-safe method to release a slot and update the display board.
      */
-    private synchronized void releaseSlot(ParkingSlot slot) {
+    public synchronized void releaseSlot(ParkingSlot slot) {
         if(slot.getParkingSpaceStatus() == ParkingSpaceStatus.OCCUPIED){
             slot.setParkingSpaceStatus(ParkingSpaceStatus.AVAILABLE);
 
