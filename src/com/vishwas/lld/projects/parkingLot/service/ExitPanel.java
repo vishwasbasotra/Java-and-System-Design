@@ -16,10 +16,6 @@ public class ExitPanel {
         this.strategy = strategy;
     }
 
-    public ExitPanel(String panelId) {
-        this.panelId = panelId;
-    }
-
     public double processExit(ParkingTicket ticket){
         // 1. Calculate Fee
         LocalDateTime entryTime = ticket.getEntryTime();
