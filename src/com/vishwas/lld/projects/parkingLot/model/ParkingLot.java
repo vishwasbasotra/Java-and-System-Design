@@ -54,6 +54,12 @@ public class ParkingLot implements Cloneable, Serializable {
         return null;
     }
 
+    public void releaseSlot(ParkingSlot slot){
+        for(ParkingFloor floor: parkingfloors){
+            floor.releaseSlot(slot);
+        }
+    }
+
     public List<ParkingFloor> getParkingfloors() {
         return parkingfloors;
     }
