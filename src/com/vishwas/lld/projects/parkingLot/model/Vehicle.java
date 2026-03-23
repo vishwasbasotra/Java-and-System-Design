@@ -2,8 +2,19 @@ package com.vishwas.lld.projects.parkingLot.model;
 
 import com.vishwas.lld.projects.parkingLot.enums.VehicleType;
 
-public class Vehicle {
+public abstract class Vehicle {
+    private String vehicleNumber;
     private VehicleType vehicleType;
+
+
+    public Vehicle(String vehicleNumber, VehicleType vehicleType) {
+        this.vehicleNumber = vehicleNumber;
+        this.vehicleType = vehicleType;
+    }
+
+    public String getVehicleNumber() {
+        return vehicleNumber;
+    }
 
     public VehicleType getVehicleType() {
         return vehicleType;
