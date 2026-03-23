@@ -65,7 +65,7 @@ public class ParkingFloor {
      * Represents the "Display Board" output for this floor.
      * This runs in O(1) because we aren't looping through slots.
      */
-    void showDisplayBoard(){
+    public void showDisplayBoard(){
         System.out.println("--Floor "+this.floorNumber+" Availability--");
         for (Map.Entry<ParkingSlotType, Integer> entry: freeSlotsCount.entrySet()){
             System.out.println(entry.getKey()+": "+entry.getValue()+" free slots.");

@@ -39,7 +39,7 @@ public class ParkingLot implements Cloneable, Serializable {
         return instance;
     }
 
-    void addFloor(ParkingFloor floor){
+    public void addFloor(ParkingFloor floor){
         parkingfloors.add(floor);
     }
 
