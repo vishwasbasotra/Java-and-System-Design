@@ -18,8 +18,8 @@ public class ParkingFloor {
         this.floorNumber = floorNumber;
         this.parkingSlots = new ArrayList<>();
         this.freeSlotsCount = new HashMap<>();
-        this.freeSlotsCount.put(ParkingSlotType.COMPACT, 50);
-        this.freeSlotsCount.put(ParkingSlotType.LARGE, 50);
+        this.freeSlotsCount.put(ParkingSlotType.COMPACT, compactSlots);
+        this.freeSlotsCount.put(ParkingSlotType.LARGE, LargeSlots);
 
         // Add slots dynamically
         for (int i = 0; i < compactSlots; i++) {
