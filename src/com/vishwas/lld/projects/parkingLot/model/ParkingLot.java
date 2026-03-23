@@ -22,9 +22,11 @@ public class ParkingLot implements Cloneable, Serializable {
     }
 
     // Thread-safe Singleton with Double-Checked Locking
-    public synchronized static ParkingLot getInstance(String name) {
+    public  static ParkingLot getInstance(String name) {
         if(instance == null){
+            synchronized(ParkingLot.class) {
                 instance = new ParkingLot(name);
+            }
         }
         return instance;
     }
