@@ -23,10 +23,10 @@ public class ParkingFloor {
 
         // Add slots dynamically
         for (int i = 0; i < compactSlots; i++) {
-            parkingSlots.add(new CompactSlot("F"+floorNumber+"C"+i));
+            parkingSlots.add(new CompactSlot("F"+floorNumber+"-C"+i));
         }
         for (int i = 0; i < LargeSlots; i++) {
-            parkingSlots.add(new LargeSlot("F"+floorNumber+"L"+i));
+            parkingSlots.add(new LargeSlot("F"+floorNumber+"-L"+i));
         }
     }
 
