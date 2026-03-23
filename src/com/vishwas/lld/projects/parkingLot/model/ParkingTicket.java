@@ -32,4 +32,12 @@ public class ParkingTicket {
     public void setStatus(TicketStatus status) {
         this.status = status;
     }
+
+    public String getTicketId() {
+        return ticketId;
+    }
+
+    public ParkingSlot getSlot() {
+        return slot;
+    }
 }
