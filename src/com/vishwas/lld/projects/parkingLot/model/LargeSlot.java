@@ -10,7 +10,7 @@ public class LargeSlot extends ParkingSlot{
 
     @Override
     public boolean canFit(Vehicle vehicle){
-        return vehicle.getVehicleType() == VehicleType.TUCK ||
+        return vehicle.getVehicleType() == VehicleType.TRUCK ||
                 vehicle.getVehicleType() == VehicleType.CAR;
     }
 }
