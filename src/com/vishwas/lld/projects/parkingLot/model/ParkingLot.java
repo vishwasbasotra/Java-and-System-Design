@@ -49,7 +49,10 @@ public class ParkingLot implements Cloneable, Serializable {
      */
     public ParkingSlot findSlotForParking(Vehicle vehicle){
         for(ParkingFloor floor: parkingfloors){
-            return floor.findAvailableSlot(vehicle);
+            ParkingSlot slot = floor.findAvailableSlot(vehicle);
+            if(slot != null) { // Only return if we actually found something!
+                return slot;
+            }
         }
         return null;
     }
