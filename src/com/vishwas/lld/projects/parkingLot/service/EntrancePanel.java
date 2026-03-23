@@ -19,7 +19,7 @@ public class EntrancePanel {
         // 2. Ask the Lot to find and book a slot (this is thread-safe inside the floor)
         ParkingSlot assignedSlot = parkingLot.findSlotForParking(vehicle);
 
-        if(assignedSlot != null){
+        if(assignedSlot == null){
             System.out.println("Sorry, the Parking Lot is currently FULL for " + vehicle.getVehicleType());
             return null;
         }else{
