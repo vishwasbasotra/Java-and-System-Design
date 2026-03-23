@@ -5,8 +5,8 @@ import com.vishwas.lld.projects.parkingLot.enums.ParkingSpaceStatus;
 import com.vishwas.lld.projects.parkingLot.enums.VehicleType;
 
 public class CompactSlot extends ParkingSlot{
-    public CompactSlot() {
-        super(ParkingSlotType.COMPACT);
+    public CompactSlot(String id) {
+        super(id, ParkingSlotType.COMPACT);
     }
 
     @Override

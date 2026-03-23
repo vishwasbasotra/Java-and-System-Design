@@ -4,8 +4,8 @@ import com.vishwas.lld.projects.parkingLot.enums.ParkingSlotType;
 import com.vishwas.lld.projects.parkingLot.enums.VehicleType;
 
 public class LargeSlot extends ParkingSlot{
-    public LargeSlot() {
-        super(ParkingSlotType.LARGE);
+    public LargeSlot(String id) {
+        super(id, ParkingSlotType.LARGE);
     }
 
     @Override
