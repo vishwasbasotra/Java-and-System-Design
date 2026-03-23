@@ -3,14 +3,13 @@ package com.vishwas.lld.projects.parkingLot.model;
 import com.vishwas.lld.projects.parkingLot.enums.ParkingSlotType;
 import com.vishwas.lld.projects.parkingLot.enums.ParkingSpaceStatus;
 
-import java.util.Map;
-
 public abstract class ParkingSlot {
-    private String parkingSlotId;
+    private final String parkingSlotId;   // Unique to THIS instance
     private ParkingSpaceStatus parkingSpaceStatus;
-    private ParkingSlotType parkingSlotType;
-    public ParkingSlot(ParkingSlotType parkingSlotType) {
-        parkingSlotId += 1;
+    private final ParkingSlotType parkingSlotType;
+
+    public ParkingSlot(String id, ParkingSlotType parkingSlotType) {
+        this.parkingSlotId = id;
         this.parkingSpaceStatus = ParkingSpaceStatus.AVAILABLE;
         this.parkingSlotType = parkingSlotType;
     }
@@ -26,5 +25,9 @@ public abstract class ParkingSlot {
 
     public ParkingSlotType getParkingSlotType() {
         return parkingSlotType;
+    }
+
+    public String getParkingSlotId() {
+        return parkingSlotId;
     }
 }
