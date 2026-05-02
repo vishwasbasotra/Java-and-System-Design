@@ -1,4 +1,4 @@
-package com.vishwas.java.multithreading;
+package com.vishwas.java.multithreading.creation;
 
 public class MultithreadingUsingRunnable implements Runnable{
 

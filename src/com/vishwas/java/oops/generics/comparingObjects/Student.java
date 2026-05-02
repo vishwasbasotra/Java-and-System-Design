@@ -14,8 +14,8 @@ class Student implements Comparable<Student> {
 
     // Default sorting logic: By Roll Number
     @Override
-    public int compareTo(Student other) {
-        return this.roll - other.roll;
+    public int compareTo(Student that) {
+        return this.roll - that.roll;
     }
 
     @Override

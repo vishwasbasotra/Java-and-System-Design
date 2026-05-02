@@ -1,4 +1,4 @@
-package com.vishwas.java.multithreading.priority;
+package com.vishwas.java.multithreading.methods;
 
 public class Priority {
     static void execute() {

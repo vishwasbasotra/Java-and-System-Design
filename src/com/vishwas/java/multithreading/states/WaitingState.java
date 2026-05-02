@@ -1,6 +1,6 @@
 package com.vishwas.java.multithreading.states;
 
-public class BlockedState {
+public class WaitingState {
     public static void main(String[] args) throws InterruptedException{
         Thread t1 = new Thread(() -> {
             try{
@@ -20,7 +20,6 @@ public class BlockedState {
         }, "Thread-2");
 
         t1.start();
-        Thread.sleep(100);
         t2.start();
 
         Thread.sleep(100);

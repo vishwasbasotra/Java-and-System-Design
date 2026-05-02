@@ -1,4 +1,4 @@
-package com.vishwas.java.multithreading;
+package com.vishwas.java.multithreading.states;
 
 public class Timed_WaitingState implements Runnable{
     @Override

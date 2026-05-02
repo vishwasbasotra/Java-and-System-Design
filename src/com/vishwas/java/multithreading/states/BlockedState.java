@@ -1,6 +1,6 @@
 package com.vishwas.java.multithreading.states;
 
-public class WaitingState {
+public class BlockedState {
     // Shared resource with a synchronized method to demonstrate Mutual Exclusion
     public synchronized void sharedResource(){
         while (true){
@@ -9,10 +9,10 @@ public class WaitingState {
         }
     }
     public static void main(String[] args) throws InterruptedException {
-        WaitingState waitingState = new WaitingState();
+        BlockedState blockedState = new BlockedState();
 
-        Thread t1 = new Thread(() -> waitingState.sharedResource(), "Thread-1");
-        Thread t2 = new Thread(() -> waitingState.sharedResource(), "Thread-2");
+        Thread t1 = new Thread(() -> blockedState.sharedResource(), "Thread-1");
+        Thread t2 = new Thread(() -> blockedState.sharedResource(), "Thread-2");
 
         t1.start();
         // Small delay to ensure t1 grabs the lock first
