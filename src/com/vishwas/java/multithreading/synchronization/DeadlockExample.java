@@ -37,6 +37,8 @@ public class DeadlockExample {
             }
         });
 
+
+
         alice.start();
         bob.start();
     }
